@@ -27,6 +27,10 @@ body{
     padding: 30px;
 }
 
+.projectListItem{
+
+}
+
 #todos{
     border-left: 2px solid black;
     height: 90vh;
