@@ -37,3 +37,11 @@ body{
     padding: 30px;
     
 }
+
+.taskFormCont{
+    position: absolute;
+    border: 2px solid black;
+    background-color: gray;
+    right: 25vw;
+    top: 25vh;
+}

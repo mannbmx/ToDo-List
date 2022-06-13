@@ -1,8 +1,10 @@
 import {addProjectToDom} from "./dom";
 
-//Project factory function
+
 let projectList = [];
 
+
+//Project factory function
 const newProject = (name) => {
     return{name};
 };
