@@ -28,20 +28,22 @@
     <div class="taskFormCont">
          <form class="addTaskForm">
             <label for="title">Title:</label>
-            <input class="taskTitle" type="text" required name="title">
+            <input class="taskTitle newTask" type="text" required name="title">
 
             <label for="priority">Priority:</label>
-            <select name="priority" id="priority">
+            <select name="priority" id="priority" class="newTask">
                 <option value="high">High</option>
                 <option value="medium">Medium</option>
                 <option value="low">Low</option>
             </select>
 
             <label for="dueDate">Due Date:</label>
-            <input type="date" class="dueDate" name="dueDate">
+            <input type="date" class="dueDate newTask" name="dueDate">
 
             <label for="description">Description:</label>
-            <textarea name="description" class="description" cols="30" rows="10"></textarea>
+            <textarea name="description" class="description newTask" cols="30" rows="10"></textarea>
+
+            <button type="button" class="taskButton">Add Task</button>
         </form>
     </div>
    
