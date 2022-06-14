@@ -23,6 +23,15 @@
         <div class="newTodoButtonCtn">
             <button class="newTodoButton" type="button">+ New ToDo</button>
         </div>
+        <div class="taskCont">
+            <div class="task">
+                <div class="priorityDisplay"></div>
+                <h4>Task Title</h4>
+                <h5>01/01/1999</h5>
+                <button>trash</button>
+                <button>edit</button>
+            </div>
+        </div>
 
     </div>
     <div class="taskFormCont">
@@ -44,6 +53,15 @@
             <textarea name="description" class="description newTask" cols="30" rows="10"></textarea>
 
             <button type="button" class="taskButton">Add Task</button>
+        </form>
+    </div>
+
+    <div class="projectFormCont">
+        <form class="addProjectForm">
+            <label for="name">Title:</label>
+            <input class="projectTitle" type="text" required name="name">
+
+            <button type="button" class="projectButton">Add Project</button>
         </form>
     </div>
    
