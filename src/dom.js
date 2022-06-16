@@ -1,3 +1,5 @@
+import {projectSwitch} from './utl';
+
 //Function adds new projects to dom
 function addProjectToDom(name){
     const projectList = document.querySelector('.projectsList');
@@ -5,6 +7,9 @@ function addProjectToDom(name){
     newListItem.classList.add('projectListItem');
     newListItem.textContent = name;
     projectList.appendChild(newListItem);
+
+    //Adds event listener
+    newListItem.addEventListener('click', function(){projectSwitch(name)})
 }
 
 //Funtion adds task to dom
@@ -36,6 +41,8 @@ function addTaskToDom(task){
     const newTaskDate = document.createElement('h5');
     newTaskDate.textContent = task.dueDate;
     newTaskDiv.appendChild(newTaskDate);
+
+    
 }   
    
 

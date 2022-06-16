@@ -66,6 +66,16 @@ textarea{
     border-radius: 6px;
 }
 
+ul{
+    list-style: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.projectListItem{
+
+}
+
 .projectFormCont{
     position: absolute;
     border: 2px solid black;

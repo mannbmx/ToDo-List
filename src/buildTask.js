@@ -1,4 +1,5 @@
 import {addTaskToDom} from './dom';
+import {activeProject} from './buildProject';
 
 
 let taskList = [];
@@ -19,7 +20,7 @@ function createTask(){
     const taskDescription = document.querySelector('.description');
 
 
-    const task = newTask(taskTitle.value, taskPriority.value, taskDueDate.value, taskDescription.value);
+    const task = newTask(taskTitle.value, taskPriority.value, taskDueDate.value, taskDescription.value, activeProject);
     taskList.push(task);
 
     addTaskToDom(task);
