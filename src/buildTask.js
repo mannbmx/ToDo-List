@@ -1,4 +1,4 @@
-
+import {addTaskToDom} from './dom';
 
 
 let taskList = [];
@@ -21,6 +21,8 @@ function createTask(){
 
     const task = newTask(taskTitle.value, taskPriority.value, taskDueDate.value, taskDescription.value);
     taskList.push(task);
+
+    addTaskToDom(task);
 
     console.log(taskList);
     closeForm();
