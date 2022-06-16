@@ -15,6 +15,8 @@ newProjectButton.addEventListener('click', function(){createProject()})
 
 
 
+
+
 function openForm(){
     document.querySelector('.taskFormCont').style.display = 'grid'
 }

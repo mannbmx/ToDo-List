@@ -20,4 +20,18 @@ function projectSwitch(name){
     }
 }
 
-export{projectSwitch}
+
+//Function to delete tasks from arr and dom
+function deleteTask(task, child){
+
+
+    const index = taskList.indexOf(task);
+    if(index > -1){
+        taskList.splice(index, 1)
+    };
+
+    const taskCont = document.querySelector('.taskCont');
+    taskCont.removeChild(child);
+};
+
+export{projectSwitch, deleteTask}

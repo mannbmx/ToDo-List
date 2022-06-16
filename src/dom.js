@@ -1,4 +1,4 @@
-import {projectSwitch} from './utl';
+import {projectSwitch, deleteTask} from './utl';
 
 //Function adds new projects to dom
 function addProjectToDom(name){
@@ -21,6 +21,13 @@ function addTaskToDom(task){
     newTaskDiv.classList.add('task');
     taskCont.appendChild(newTaskDiv);
 
+    //Divs for flex box
+    const taskDiv1 = document.createElement('div');
+    taskDiv1.classList.add('taskDiv1');
+    newTaskDiv.appendChild(taskDiv1);
+    const taskDiv2 = document.createElement('div');
+    newTaskDiv.appendChild(taskDiv2);
+
     //Adds priority color
     const newPriorityDiv = document.createElement('div');
     if(task.priority === 'high'){
@@ -30,17 +37,37 @@ function addTaskToDom(task){
     }else{
         newPriorityDiv.classList.add('lowPriority');
     };
-    newTaskDiv.appendChild(newPriorityDiv);
+    taskDiv1.appendChild(newPriorityDiv);
 
     //Adds Title
     const newTaskTitle = document.createElement('h4');
     newTaskTitle.textContent = task.title;
-    newTaskDiv.appendChild(newTaskTitle);
+    taskDiv1.appendChild(newTaskTitle);
 
     //Adds Date
     const newTaskDate = document.createElement('h5');
     newTaskDate.textContent = task.dueDate;
-    newTaskDiv.appendChild(newTaskDate);
+    taskDiv1.appendChild(newTaskDate);
+
+    // Adds btns
+    const newTaskTrash = document.createElement('button');
+    newTaskTrash.classList.add('iconBtn');
+    taskDiv2.appendChild(newTaskTrash);
+    const trashIcon = document.createElement('i');
+    trashIcon.classList.add('fa-solid', 'fa-trash-can', 'fa-xl');
+    newTaskTrash.appendChild(trashIcon);
+
+    // Trash event listener
+    newTaskTrash.addEventListener('click', function(){deleteTask(task, newTaskDiv)})
+
+
+
+    const newTaskEdit = document.createElement('button');
+    newTaskEdit.classList.add('iconBtn');
+    taskDiv2.appendChild(newTaskEdit);
+    const editIcon = document.createElement('i');
+    editIcon.classList.add("fa-solid", "fa-ellipsis-vertical", 'fa-xl');
+    newTaskEdit.appendChild(editIcon);
 
     
 }   

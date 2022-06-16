@@ -97,36 +97,43 @@ ul{
 .task{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     max-height: 50px;
     align-items: center;
     gap: 20px;
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 8px;
 }
 
-.priorityDisplay{
-    height: 50px;
-    width: 7px;
-    background-color: red;
+.taskDiv1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.iconBtn{
+    /* border: none;
+    background-color: white; */
+    cursor: pointer;
 }
 
 .highPriority{
     height: 50px;
-    width: 7px;
+    width: 20px;
     background-color: red;
-    border-radius: 8px;
 }
 
 .mediumPriority{
     height: 50px;
-    width: 7px;
+    width: 20px;
     background-color: yellow;
     border-radius: 8px;
 }
 
 .lowPriority{
     height: 50px;
-    width: 7px;
+    width: 20px;
     background-color: greenyellow;
     border-radius: 8px;
+    
 }
