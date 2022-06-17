@@ -9,15 +9,26 @@ function projectSwitch(name){
     taskCont.innerHTML = '';
 
     //Switch activeProject
-    activeProject = name;
+    if(name != 'All Tasks'){
+        activeProject = name;
+    }
+    
 
 
    //Adds tasks with proper projectId to the dom
+   if(name === 'All Tasks'){
     for(const task of taskList){
-        if(task.projectId === name){
-            addTaskToDom(task);
+        addTaskToDom(task);
+    };
+   } else{
+        for(const task of taskList){
+            if(task.projectId === name){
+                addTaskToDom(task);
+            }
         }
-    }
+   }
+   
+   
 }
 
 

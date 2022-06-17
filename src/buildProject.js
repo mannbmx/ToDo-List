@@ -23,8 +23,18 @@ function createProject(){
     closeForm();
 }
 
+
+function defaultProject(){
+    //Dom selector for project name value from form goes here
+    const project = 'All Tasks';
+    projectList.push(project);
+    addProjectToDom(project);
+};
+
+console.log(defaultProject());
+
 function closeForm(){
     document.querySelector('.projectFormCont').style.display = 'none';
 }
 
-export{newProject, createProject, projectList, activeProject}
+export{newProject, createProject, projectList, activeProject, defaultProject}

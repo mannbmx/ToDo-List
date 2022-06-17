@@ -1,4 +1,4 @@
-import {newProject, createProject, projectList} from "./buildProject";
+import {newProject, createProject, projectList, defaultProject} from "./buildProject";
 import {createTask, taskList} from "./buildTask";
 
 
