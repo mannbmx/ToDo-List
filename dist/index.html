@@ -57,6 +57,31 @@
             <button type="button" class="projectButton">Add Project</button>
         </form>
     </div>
+
+    <div class="editTaskFormCont">
+        <form class="editTaskForm">
+
+            <h1 class="editTaskHeader">Edit Task</h1>
+
+           <label for="title">Title:</label>
+           <input class="editTaskTitle newTask" type="text" required name="title">
+
+           <label for="priority">Priority:</label>
+           <select name="priority" id="editPriority" class="editTask">
+               <option value="high">High</option>
+               <option value="medium">Medium</option>
+               <option value="low">Low</option>
+           </select>
+
+           <label for="dueDate">Due Date:</label>
+           <input type="date" class="editDueDate editTask" name="dueDate">
+
+           <label for="description">Description:</label>
+           <textarea name="description" class="editDescription editTask" cols="30" rows="10"></textarea>
+
+           <button type="button" class="editTaskButton">Add Task</button>
+       </form>
+   </div>
    
 </body>
 </html>

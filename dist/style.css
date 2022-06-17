@@ -27,9 +27,6 @@ body{
     padding: 30px;
 }
 
-.projectListItem{
-
-}
 
 #todos{
     border-left: 2px solid black;
@@ -40,6 +37,9 @@ body{
     gap: 15px;
 }
 
+
+
+/* Task form container and form */
 .taskFormCont{
     position: absolute;
     border: 2px solid black;
@@ -58,6 +58,9 @@ body{
     gap: 10px;
 }
 
+
+
+/* Project Container and list */
 input{
     border-radius: 6px;
 }
@@ -72,10 +75,8 @@ ul{
     cursor: pointer;
 }
 
-.projectListItem{
 
-}
-
+/* Project form container  */
 .projectFormCont{
     position: absolute;
     border: 2px solid black;
@@ -88,6 +89,8 @@ ul{
     display: none;
 }
 
+
+/* Task Container and tasks */
 .taskCont{
     display: flex;
     flex-direction: column;
@@ -136,4 +139,24 @@ ul{
     background-color: greenyellow;
     border-radius: 8px;
     
+}
+
+
+/* Edit task form container and form */
+.editTaskFormCont{
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: gray;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    display: none;
+}
+
+.editTaskForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

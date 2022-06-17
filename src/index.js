@@ -4,6 +4,7 @@ import {createTask, taskList} from "./buildTask";
 
 
 
+
 console.log(projectList)
 
 
@@ -12,6 +13,8 @@ newTaskButton.addEventListener('click', function(){createTask()});
 
 const newProjectButton = document.querySelector('.projectButton');
 newProjectButton.addEventListener('click', function(){createProject()})
+
+
 
 
 

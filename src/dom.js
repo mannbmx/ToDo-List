@@ -1,4 +1,4 @@
-import {projectSwitch, deleteTask} from './utl';
+import {projectSwitch, deleteTask, editTask} from './utl';
 
 //Function adds new projects to dom
 function addProjectToDom(name){
@@ -68,6 +68,14 @@ function addTaskToDom(task){
     const editIcon = document.createElement('i');
     editIcon.classList.add("fa-solid", "fa-ellipsis-vertical", 'fa-xl');
     newTaskEdit.appendChild(editIcon);
+
+    // Edit event listener
+    newTaskEdit.addEventListener('click', function(){
+        document.querySelector('.editTaskFormCont').style.display = 'grid';
+    });
+
+    const editTaskBtn = document.querySelector('.editTaskButton');
+    editTaskBtn.addEventListener('click', function(){editTask(task, newTaskDiv)})
 
     
 }   

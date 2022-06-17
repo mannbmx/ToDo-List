@@ -33,4 +33,4 @@ function closeForm(){
     document.querySelector('.taskFormCont').style.display = 'none';
 }
 
-export{createTask, taskList}
+export{createTask, taskList, newTask}

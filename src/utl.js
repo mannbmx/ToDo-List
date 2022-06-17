@@ -1,7 +1,10 @@
 import { activeProject } from './buildProject';
-import {taskList} from './buildTask';
+import {taskList, newTask} from './buildTask';
 import {addTaskToDom} from './dom';
 
+
+
+//Function to switch between diffrent projects
 function projectSwitch(name){
    
     //Clears the dom
@@ -45,4 +48,41 @@ function deleteTask(task, child){
     taskCont.removeChild(child);
 };
 
-export{projectSwitch, deleteTask}
+
+//Function that allows you to edit tasks
+function editTask(task, child){
+        //Dom selector gets values from for goes here
+        const taskTitle = document.querySelector('.editTaskTitle');
+        const taskPriority = document.querySelector('#editPriority');
+        const taskDueDate = document.querySelector('.editDueDate');
+        const taskDescription = document.querySelector('.editDescription');
+        const index = taskList.indexOf(task);
+
+        //Fills form with current values
+        task.title = taskTitle.value;
+        task.priority = taskPriority.value;
+        task.dueDate = taskDueDate.value;
+        task.Description = taskDescription.value;
+        
+        const taskCont = document.querySelector('.taskCont');
+        taskCont.removeChild(child);
+    
+    
+        // const editedTask = newTask(taskTitle.value, taskPriority.value, taskDueDate.value, taskDescription.value, activeProject);
+        // taskList.slice(index, 0, editedTask);
+    
+        addTaskToDom(task);
+    
+        console.log(taskList);
+        closeEditForm();
+}
+
+function closeEditForm(){
+    document.querySelector('.editTaskFormCont').style.display = 'none';
+}
+
+
+
+
+
+export{projectSwitch, deleteTask, editTask}
