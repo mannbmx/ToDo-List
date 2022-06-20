@@ -1,4 +1,4 @@
-import {projectSwitch, deleteTask, editTask} from './utl';
+import {projectSwitch, deleteTask, editTask, openFullTask} from './utl';
 
 //Function adds new projects to dom
 function addProjectToDom(name){
@@ -20,6 +20,9 @@ function addTaskToDom(task){
     const newTaskDiv = document.createElement('div');
     newTaskDiv.classList.add('task');
     taskCont.appendChild(newTaskDiv);
+
+
+    newTaskDiv.addEventListener('click', function(){openFullTask(task)})
 
     //Divs for flex box
     const taskDiv1 = document.createElement('div');
